@@ -9,4 +9,5 @@ module.export = {
     "jest/globals": true
   },
   plugins: ["@typescript-eslint", "react", "jest"],
+  parser: "babel-eslint"
 }
