@@ -17,6 +17,9 @@
           "appId": "d2y66cdweyqnnx",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "gracebiofier49a771c8": {}
       }
     }
   }

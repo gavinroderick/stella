@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3biofier",
+  "policyUUID": "08ebb7c6",
+  "bucketName": "gracebiofier",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
