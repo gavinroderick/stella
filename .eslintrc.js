@@ -1,5 +1,9 @@
-module.export = {
-  "extends": "next/core-web-vitals",
+module.exports = {
+  "extends": [
+    "next/core-web-vitals", 
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "@next/next/no-img-element": "off"
   },
@@ -9,5 +13,8 @@ module.export = {
     "jest/globals": true
   },
   plugins: ["@typescript-eslint", "react", "jest"],
-  parser: "babel-eslint"
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    sourceType: "module",
+ },
 }
