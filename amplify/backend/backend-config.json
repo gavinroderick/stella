@@ -6,5 +6,10 @@
       "lastPushTimeStamp": "2022-10-12T10:33:22.974Z"
     }
   },
-  "storage": {}
+  "storage": {
+    "dynamo6d516361": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
+  }
 }

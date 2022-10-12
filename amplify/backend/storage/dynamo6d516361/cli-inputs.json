@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamo6d516361",
+  "tableName": "bios",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
