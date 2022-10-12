@@ -34,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write \"src/*.ts\" \"src/**/*.ts*\"",
+      "pre-commit": "prettier --write \"src/*.ts\" \"src/**/*.ts*\" && npm run test",
       "pre-push": "tsc && npm run lint"
     }
   }
