@@ -5,5 +5,11 @@
       "type": "cicd",
       "lastPushTimeStamp": "2022-10-12T10:33:22.974Z"
     }
+  },
+  "storage": {
+    "dynamoc900cd99": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
