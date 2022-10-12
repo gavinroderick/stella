@@ -10,6 +10,14 @@
       "StackName": "amplify-gracebiofier-dev-112216",
       "StackId": "arn:aws:cloudformation:eu-west-2:719745789716:stack/amplify-gracebiofier-dev-112216/bfc8e230-4a17-11ed-b931-0a837a31b980",
       "AmplifyAppId": "d2y66cdweyqnnx"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2y66cdweyqnnx",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
