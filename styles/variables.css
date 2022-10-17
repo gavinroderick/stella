@@ -1,0 +1,68 @@
+:root {
+    /* colors */
+    --color-primary-red: #D82036;
+    --color-primary-charcoal: #323232;
+    --color-primary-white: #FFFFFF;
+    --color-secondary-blue: #1F73C2;
+    --color-secondary-purple: #954BF2;
+    --color-secondary-green: #337D0F;
+    --color-secondary-charcoal: #252424;
+    --color-grey-dark: #434343;
+    --color-grey-mid: #757575;
+    --color-grey-text-dark: #B8B8B8;
+    --color-grey-light: #ECECEC;
+    --color-grey-super-light: #F8F8F8;
+    --color-accent-red: #FF233C;
+    --color-accent-blue: #2897FF;
+    --color-accent-purple: #7D41C8;
+    --color-accent-yellow: #FFC800;
+    --color-accent-green: #43A813;
+    --color-functional-red: #A40D1F;
+    --color-functional-blue: #134779;
+    --color-functional-green: #205109;
+    --color-functional-purple: #592D91;
+  
+    /* borders */
+    --border-base: 1px solid var(var(--color-grey-text-dark));
+  
+    /* typography */
+    --font-family-header: "Poppins", sans-serif;
+    --font-family-base: "Roboto", sans-serif;
+  
+    --font-size-base: 1.6rem;
+    --font-size-s: 1.4rem;
+    --font-size-m: 1.8rem;
+    --font-size-l: 1.8rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.4rem;
+    --font-size-xxxl: 3rem;
+    --font-size-xxxxl: 3.6rem;
+    --line-height-base: 2.4rem;
+    --line-height-s: 2.2rem;
+    --line-height-m: 2.6rem;
+    --line-height-l: 2.4rem;
+    --line-height-xl: 2.6rem;
+    --line-height-xxl: 3rem;
+    --line-height-xxxl: 3.6rem;
+    --line-height-xxxxl: 4.4rem;
+  
+    --font-weight-bold: 700;
+    --font-weight-semi-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+}
+  
+@media (min-width: 1230px) {
+    :root {
+        --font-size-l: 2.4rem;
+        --font-size-xl: 3.2rem;
+        --font-size-xxl: 3.8rem;
+        --font-size-xxxl: 5rem;
+        --font-size-xxxxl: 6.4rem;
+        --line-height-l: 3.2rem;
+        --line-height-xl: 4.6rem;
+        --line-height-xxl: 5.6rem;
+        --line-height-xxxl: 6.2rem;
+        --line-height-xxxxl: 7.2em;
+    }
+}

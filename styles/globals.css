@@ -1,0 +1,68 @@
+:root {
+  --color-grey-light: #ECECEC;
+  --color-grey-super-light: #F8F8F8;
+  --color-accent-red: #FF233C;
+  --color-accent-blue: #2897FF;
+  --color-accent-purple: #7D41C8;
+  --color-accent-yellow: #FFC800;
+  --color-accent-green: #43A813;
+  --color-functional-red: #A40D1F;
+  --color-functional-blue: #134779;
+  --color-functional-green: #205109;
+  --color-functional-purple: #592D91;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-header);
+}
+
+body,
+h6 {
+  font-family: var(--font-family-base);
+}
+
+h1 {
+  font-size: var(--font-size-xxxxl);
+  line-height: var(--line-height-xxxxl);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h2 {
+  font-size: var(--font-size-xxxl);
+  line-height: var(--line-height-xxxl);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h3 {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-xxl);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h5 {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+  font-weight: var(--font-weight-medium);
+}
+
+h6, a {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  font-weight: var(--font-weight-medium);
+}
+
+body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+}
