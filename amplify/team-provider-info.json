@@ -10,6 +10,11 @@
       "StackName": "amplify-gracestella-dev-143250",
       "StackId": "arn:aws:cloudformation:eu-west-2:719745789716:stack/amplify-gracestella-dev-143250/87e04bb0-4fb2-11ed-b242-0ac09455b1d8",
       "AmplifyAppId": "d1gxsd80k5g5cl"
+    },
+    "categories": {
+      "auth": {
+        "gracestellabe23765d": {}
+      }
     }
   }
 }
