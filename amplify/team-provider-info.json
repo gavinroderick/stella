@@ -1,26 +1,15 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-gracebiofier-dev-112216-authRole",
-      "UnauthRoleArn": "arn:aws:iam::719745789716:role/amplify-gracebiofier-dev-112216-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::719745789716:role/amplify-gracebiofier-dev-112216-authRole",
+      "AuthRoleName": "amplify-gracestella-dev-143250-authRole",
+      "UnauthRoleArn": "arn:aws:iam::719745789716:role/amplify-gracestella-dev-143250-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::719745789716:role/amplify-gracestella-dev-143250-authRole",
       "Region": "eu-west-2",
-      "DeploymentBucketName": "amplify-gracebiofier-dev-112216-deployment",
-      "UnauthRoleName": "amplify-gracebiofier-dev-112216-unauthRole",
-      "StackName": "amplify-gracebiofier-dev-112216",
-      "StackId": "arn:aws:cloudformation:eu-west-2:719745789716:stack/amplify-gracebiofier-dev-112216/bfc8e230-4a17-11ed-b931-0a837a31b980",
-      "AmplifyAppId": "d2y66cdweyqnnx"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d2y66cdweyqnnx",
-          "type": "cicd"
-        }
-      },
-      "auth": {
-        "gracebiofier49a771c8": {}
-      }
+      "DeploymentBucketName": "amplify-gracestella-dev-143250-deployment",
+      "UnauthRoleName": "amplify-gracestella-dev-143250-unauthRole",
+      "StackName": "amplify-gracestella-dev-143250",
+      "StackId": "arn:aws:cloudformation:eu-west-2:719745789716:stack/amplify-gracestella-dev-143250/87e04bb0-4fb2-11ed-b242-0ac09455b1d8",
+      "AmplifyAppId": "d1gxsd80k5g5cl"
     }
   }
 }
