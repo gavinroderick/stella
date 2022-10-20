@@ -2,6 +2,8 @@ version: 1
 env:
   variables:
     NEXT_PUBLIC_AMPLIFY_ENV: ${AWS_BRANCH}
+    AMPLIFY_GOOGLE_CLIENT_ID: googleClientId
+    AMPLIFY_GOOGLE_CLIENT_SECRET: googleSecret
 backend:
   phases:
     build:
