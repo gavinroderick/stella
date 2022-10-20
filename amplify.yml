@@ -6,6 +6,10 @@ env:
     AMPLIFY_GOOGLE_CLIENT_SECRET: googleSecret
     googleAppIdUserPool: googleAppIdUserPool
     googleAppSecretUserPool: googleAppSecretUserPool
+    AMPLIFY_USERPOOL_ID: amplify_userpool_id
+    AMPLIFY_WEBCLIENT_ID: amplify_webclient_id
+    AMPLIFY_NATIVECLIENT_ID: amplify_nativeclient_id
+    AMPLIFY_IDENTITYPOOL_ID: amplify_identitypool_id
 backend:
   phases:
     build:
