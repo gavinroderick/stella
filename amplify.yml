@@ -4,6 +4,8 @@ env:
     NEXT_PUBLIC_AMPLIFY_ENV: ${AWS_BRANCH}
     AMPLIFY_GOOGLE_CLIENT_ID: googleClientId
     AMPLIFY_GOOGLE_CLIENT_SECRET: googleSecret
+    googleAppIdUserPool: googleAppIdUserPool
+    googleAppSecretUserPool: googleAppSecretUserPool
 backend:
   phases:
     build:
