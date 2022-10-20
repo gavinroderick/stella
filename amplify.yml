@@ -13,7 +13,7 @@ backend:
     build:
       commands:
         - "# Execute custom Amplify push script to mitigate Amplify CLI Bug"
-        - "Explaination: https://stackoverflow.com/questions/56649214/amplify-error-auth-headless-init-is-missing-the-following-inputparams-facebooka"
+        - "# Explaination: https://stackoverflow.com/questions/56649214/amplify-error-auth-headless-init-is-missing-the-following-inputparams-facebooka"
         - chmod u+x ./amplifyPush.sh
         - ./amplifyPush.sh
 frontend:
