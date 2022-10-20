@@ -14,6 +14,7 @@ type AwsConfig = typeof awsConfig;
  */
 const configureAuth = (): void => {
   const environmentSpecificConfig = configureRedirectUris(awsConfig);
+  console.log(environmentSpecificConfig);
   Amplify.configure(environmentSpecificConfig);
 };
 
@@ -29,6 +30,10 @@ const configureRedirectUris = (conf: AwsConfig): AwsConfig => {
     case "localhost":
       return replaceRedirectUris(conf, "http://localhost:3000/");
     default:
+      console.log(
+        "replacing RedirectURI with:  " +
+          `https://${env}.d1gxsd80k5g5cl.amplifyapp.com/`
+      );
       return replaceRedirectUris(
         conf,
         `https://${env}.d1gxsd80k5g5cl.amplifyapp.com/`
