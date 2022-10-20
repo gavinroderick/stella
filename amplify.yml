@@ -2,20 +2,20 @@ version: 1
 env:
   variables:
     NEXT_PUBLIC_AMPLIFY_ENV: ${AWS_BRANCH}
-    AMPLIFY_GOOGLE_CLIENT_ID: googleClientId
-    AMPLIFY_GOOGLE_CLIENT_SECRET: googleSecret
-    googleAppIdUserPool: googleAppIdUserPool
-    googleAppSecretUserPool: googleAppSecretUserPool
-    AMPLIFY_USERPOOL_ID: amplify_userpool_id
-    AMPLIFY_WEBCLIENT_ID: amplify_webclient_id
-    AMPLIFY_NATIVECLIENT_ID: amplify_nativeclient_id
-    AMPLIFY_IDENTITYPOOL_ID: amplify_identitypool_id
+    AMPLIFY_FACEBOOK_CLIENT_ID: amplify_facebook_client_id
+    AMPLIFY_FACEBOOK_CLIENT_SECRET: amplify_facebook_client_secret
+    AMPLIFY_GOOGLE_CLIENT_ID: amplify_google_client_id
+    AMPLIFY_GOOGLE_CLIENT_SECRET: amplify_google_client_secret
+    AMPLIFY_AMAZON_CLIENT_ID: amplify_amazon_client_id
+    AMPLIFY_AMAZON_CLIENT_SECRET: amplify_amazon_client_secret
 backend:
   phases:
     build:
       commands:
-        - "# Execute Amplify CLI with the helper script"
-        - amplifyPush --simple
+        - "# Execute custom Amplify push script to mitigate Amplify CLI Bug"
+        - "Explaination: https://stackoverflow.com/questions/56649214/amplify-error-auth-headless-init-is-missing-the-following-inputparams-facebooka"
+        - chmod u+x ./amplifyPush.sh
+        - ./amplifyPush.sh
 frontend:
   phases:
     preBuild:
