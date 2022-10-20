@@ -24,23 +24,14 @@ const configureAuth = (): void => {
  * @returns - An updated config with only one value per redirect URI
  */
 const configureRedirectUris = (conf: AwsConfig): AwsConfig => {
-  switch (process.env.NEXT_PUBLIC_AMPLIFY_ENV) {
+  const env = process.env.NEXT_PUBLIC_AMPLIFY_ENV;
+  switch (env) {
     case "localhost":
       return replaceRedirectUris(conf, "http://localhost:3000/");
-    case "dev":
-      return replaceRedirectUris(
-        conf,
-        "https://dev-<amplifyappname>.amplify.app/"
-      );
-    case "main":
-      return replaceRedirectUris(
-        conf,
-        "https://main-<amplifyappname>.amplify.app/"
-      );
     default:
       return replaceRedirectUris(
         conf,
-        `https://${process.env.NEXT_PUBLIC_AMPLIFY_ENV}/`
+        `https://${env}.d1gxsd80k5g5cl.amplifyapp.com/`
       );
   }
 };
