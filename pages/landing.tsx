@@ -3,7 +3,6 @@ import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
 import { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import Google from "../public/google.svg";
-import Image from "next/image";
 
 const Landing: NextPage = () => {
   return (
