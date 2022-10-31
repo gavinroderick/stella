@@ -6,12 +6,15 @@ import { Auth, Hub } from "aws-amplify";
 import { useEffect, useState } from "react";
 import { CognitoUser } from "@aws-amplify/auth";
 import Landing from "./landing";
-import { configureAuth } from "../src/auth/auth.helpers";
+import { configureAuth, isFeatureBranch } from "../src/auth/auth.helpers";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [user, setUser] = useState<CognitoUser | null>(null);
+  const [disableAuth, setDisableAuth] = useState(false);
 
-  configureAuth();
+  if (isFeatureBranch()) setDisableAuth(true);
+  if (!disableAuth) configureAuth();
+
   useEffect(() => {
     const unsubscribe = Hub.listen("auth", ({ payload: { event, data } }) => {
       switch (event) {
@@ -30,7 +33,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     return unsubscribe;
   }, []);
 
-  return <>{user ? <Component {...pageProps} /> : <Landing />}</>;
+  return (
+    <>
+      {disableAuth ? (
+        <Component {...pageProps} />
+      ) : user ? (
+        <Component {...pageProps} />
+      ) : (
+        <Landing />
+      )}
+    </>
+  );
 }
 
 export default MyApp;

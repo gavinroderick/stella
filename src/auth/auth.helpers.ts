@@ -7,6 +7,16 @@ import { Amplify } from "aws-amplify";
 type AwsConfig = typeof awsConfig;
 
 /**
+ * Helper function to determine if the branch being used is a feature branch.
+ * @returns true if the environment begins with feat, otherwise returns false
+ */
+const isFeatureBranch = (): boolean => {
+  const env = process.env.NEXT_PUBLIC_AMPLIFY_ENV;
+  if (env === undefined) return false;
+  return env.startsWith("feat");
+};
+
+/**
  * Configures authorization for the app.
  *
  * @remarks Currently utilises the \@aws-amplify/auth npm library,
@@ -61,4 +71,4 @@ const replaceRedirectUris = (config: AwsConfig, newUri: string): AwsConfig => {
   return newConfig;
 };
 
-export { configureAuth };
+export { configureAuth, isFeatureBranch };
