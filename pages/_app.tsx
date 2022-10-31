@@ -11,7 +11,6 @@ import { configureAuth } from "../src/auth/auth.helpers";
 function MyApp({ Component, pageProps }: AppProps) {
   const [user, setUser] = useState<CognitoUser | null>(null);
 
-  console.log("Amplify Env is: " + process.env.NEXT_PUBLIC_AMPLIFY_ENV);
   configureAuth();
   useEffect(() => {
     const unsubscribe = Hub.listen("auth", ({ payload: { event, data } }) => {

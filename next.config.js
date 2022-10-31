@@ -2,6 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  webpack(nextConfig) {
+    nextConfig.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
+    });
 
-module.exports = nextConfig
+    return nextConfig;
+  },
+};
+
+module.exports = nextConfig;

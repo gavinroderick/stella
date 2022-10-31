@@ -2,8 +2,20 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Auth } from "aws-amplify";
+import { useState, useEffect } from "react";
+import { awsUser } from "../src/types";
 
 const Home: NextPage = () => {
+  const [user, setUser] = useState<awsUser>();
+
+  useEffect(() => {
+    Auth.currentUserInfo()
+      .then((u) => {
+        setUser(u);
+      })
+      .catch((e) => console.error(e));
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,10 +25,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-          We made this change and our CI/CD works!
-        </h1>
+        <h1 className={styles.title}>Welcome, {user?.attributes.email}</h1>
 
         <p className={styles.description}>
           Get started by editing{" "}
@@ -52,6 +61,7 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
+
         <button onClick={() => Auth.signOut()}>Sign Out</button>
       </main>
 
@@ -61,10 +71,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Powered by <span className={styles.logo}></span>
         </a>
       </footer>
     </div>
