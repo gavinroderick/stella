@@ -59,8 +59,8 @@ const configureRedirectUris = (conf: AwsConfig): AwsConfig => {
  * @param newUri - The string URI of that is to replace one or more existing URIs in the config
  * @returns - An updated awsConfig object with updated redirectSignIn and redirectSignOut properties
  */
-const replaceRedirectUris = (config: AwsConfig, newUri: string): AwsConfig => {
-  const newConfig: AwsConfig = {
+const replaceRedirectUris = (config: any, newUri: string): any => {
+  const newConfig: any = {
     ...config,
     oauth: {
       ...config.oauth,
