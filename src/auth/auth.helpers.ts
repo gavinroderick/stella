@@ -35,6 +35,7 @@ const configureAuth = (): void => {
  */
 const configureRedirectUris = (conf: AwsConfig): AwsConfig => {
   const env = process.env.NEXT_PUBLIC_AMPLIFY_ENV;
+  console.log(`Amplify Env is: ${env}`);
   switch (env) {
     case "localhost":
       return replaceRedirectUris(conf, "http://localhost:3000/");
@@ -43,7 +44,11 @@ const configureRedirectUris = (conf: AwsConfig): AwsConfig => {
         conf,
         "https://main.d1gxsd80k5g5cl.amplifyapp.com/"
       );
-
+    case "production":
+      return replaceRedirectUris(
+        conf,
+        "https://production.d1gxsd80k5g5cl.amplifyapp.com/"
+      );
     default:
       return replaceRedirectUris(
         conf,
